@@ -1,0 +1,63 @@
+{
+    "users": [
+      {
+        "userId": 1,
+        "username": "brewfan",
+        "email": "brewfan@example.com",
+        "password": "hashedPassword",
+        "location": "Ohio",
+        "favBeer": "IPA",
+        "favBrewery": "MadTree Brewing 2.0"
+      }
+    ],
+    "checklists": [
+      {
+        "checklistId": 1,
+        "userId": 1,
+        "breweryId": "b54b16e1-ac3b-4bff-a11f-f7ae9ddc27e0",
+        "personalRating": 5,
+        "visitDate": "2024-11-08",
+        "favTypeBeer": 2,
+        "recommended": true
+      }
+    ],
+    "beerTypes": [
+      {
+        "typeId": 1,
+        "name": "IPA"
+      },
+      {
+        "typeId": 2,
+        "name": "Stout"
+      },
+      {
+        "typeId": 3,
+        "name": "Lager"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendationId": 1,
+        "checklistId": 1,
+        "rating": 4,
+        "state": "Ohio"
+      }
+    ],
+    "breweries": [
+      {
+        "breweryId": "b54b16e1-ac3b-4bff-a11f-f7ae9ddc27e0",
+        "name": "MadTree Brewing 2.0",
+        "brewery_type": "regional",
+        "address": "5164 Kennedy Ave",
+        "city": "Cincinnati",
+        "state_province": "Ohio",
+        "postal_code": "45213",
+        "country": "United States",
+        "phone": "5138368733",
+        "website_url": "http://www.madtreebrewing.com",
+        "longitude": "-84.4137736",
+        "latitude": "39.1885752"
+      }
+    ]
+  }
+  
