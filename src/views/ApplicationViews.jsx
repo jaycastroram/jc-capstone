@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from '../components/nav/NavBar';
 import WelcomeScreen from './WelcomeScreen';
 import BreweriesList from '../components/breweries/BreweriesList';
+import BrewDetails from '../components/breweries/BrewDetails'; // Import BrewDetails component
 
 const ApplicationView = ({ isLoggedIn }) => {
   return (
@@ -11,7 +12,7 @@ const ApplicationView = ({ isLoggedIn }) => {
       <Routes>
         <Route path="/" element={<WelcomeScreen />} />
         <Route path="/breweries" element={<BreweriesList />} />
-        {/* Add more routes here as needed */}
+        <Route path="/brewery/:id" element={<BrewDetails isLoggedIn={isLoggedIn} />} /> {/* New route */}
       </Routes>
     </div>
   );
