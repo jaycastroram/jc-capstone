@@ -1,0 +1,143 @@
+/* Main Container for Edit Profile and Profile Details */
+.edit-profile, .profile-details {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Heading */
+  .edit-profile h2, .profile-details h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  /* Form Layout and Labels */
+  .edit-form label, .profile-details label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Aligning Input Fields */
+  .edit-form input[type="text"],
+  .edit-form input[type="email"],
+  .edit-form input[type="url"],
+  .profile-details input[type="text"],
+  .profile-details input[type="email"],
+  .profile-details input[type="url"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Focus Effect for Input Fields */
+  .edit-form input[type="text"]:focus,
+  .edit-form input[type="email"]:focus,
+  .edit-form input[type="url"]:focus,
+  .profile-details input[type="text"]:focus,
+  .profile-details input[type="email"]:focus,
+  .profile-details input[type="url"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .save-btn, .cancel-btn, .edit-profile-btn, .add-pic-btn {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Save Button */
+  .save-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    margin-right: 4%;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Cancel Button */
+  .cancel-btn {
+    background-color: #d9534f;
+    color: #ffffff;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Edit Profile Button and Add Picture Button for Profile Details */
+  .edit-profile-btn, .add-pic-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+  
+  .edit-profile-btn:hover, .add-pic-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error and Loading Messages */
+  .error, .loading {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .error {
+    color: #d9534f;
+  }
+  
+  .loading {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  /* Profile Picture */
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Container for Profile Information */
+  .profile-info, .edit-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .profile-text {
+    text-align: left;
+    margin-top: 10px;
+  }
+  

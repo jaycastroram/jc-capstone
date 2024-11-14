@@ -1,0 +1,101 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+  /* First layer: background image */
+  background-image: url('assets/Background.png'), 
+                    linear-gradient(rgba(254, 251, 251, 0.341), rgba(224, 224, 206, 0));
+  
+  background-blend-mode: overlay; /* Blend the image and gradient layers */
+  
+  /* Additional styling to cover the entire page */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Keeps the background image fixed in place while content scrolls */
+  background-attachment: fixed;
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main container styling */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation bar styling */
+.navbar {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar__title {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.navbar__links {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.navbar__links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+  color: #ffcc00;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ffcc00;
+}
+
