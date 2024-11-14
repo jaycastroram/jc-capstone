@@ -72,10 +72,10 @@ export const Login = ({ setIsLoggedIn }) => {
               </button>
             </div>
           </fieldset>
-        </form>
-      </section>
       <section>
         <Link to="/register">Not a member yet?</Link>
+      </section>
+        </form>
       </section>
     </main>
   );

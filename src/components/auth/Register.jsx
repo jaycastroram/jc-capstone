@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
 import { createUser, getUserByEmail } from "../../services/userService";
+import { getStates } from "../../services/locationServices";
 
 export const Register = (props) => {
   const [customer, setCustomer] = useState({
@@ -9,57 +10,65 @@ export const Register = (props) => {
     fullName: "",
     userName: "",
     password: "",
-    state: "",
+    stateID: "",  // Updated to stateID to match the new structure
     profilePicture: "",
+    
     isLoggedIn: false,
   });
-
+  const [states, setStates] = useState([]); // Holds states list
   const navigate = useNavigate();
 
-  const registerNewUser = () => {
-    createUser(customer).then((createdUser) => {
-      console.log("Created user:", createdUser); // Debugging output
-      if (createdUser && createdUser.hasOwnProperty("userId")) {
-        localStorage.setItem(
-          "AleTrail_user",
-          JSON.stringify({
-            id: createdUser.userId,
-            isLoggedIn: true,
-          })
-        );
-        setCustomer({
-          email: "",
-          fullName: "",
-          userName: "",
-          password: "",
-          state: "",
-          profilePicture: "",
-          isLoggedIn: true,
-        });
-        navigate("/");
-      } else {
-        console.error("User creation failed."); // Error handling
-      }
-    }).catch((error) => {
-      console.error("Error during registration:", error); // Additional error handling
+  useEffect(() => {
+    // Fetch states from service and set them in state
+    getStates().then(setStates).catch((error) => {
+      console.error("Failed to fetch states:", error);
     });
+  }, []);
+
+  const registerNewUser = () => {
+    createUser(customer)
+      .then((createdUser) => {
+        if (createdUser && createdUser.hasOwnProperty("userId")) {
+          localStorage.setItem(
+            "AleTrail_user",
+            JSON.stringify({
+              id: createdUser.userId,
+              isLoggedIn: true,
+            })
+          );
+          setCustomer({
+            email: "",
+            fullName: "",
+            userName: "",
+            password: "",
+            stateID: "",
+            profilePicture: "",
+            isLoggedIn: true,
+          });
+          navigate("/");
+        } else {
+          console.error("User creation failed.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error during registration:", error);
+      });
   };
-  
 
   const handleRegister = (e) => {
     e.preventDefault();
-  
-    getUserByEmail(customer.email).then((response) => {
-      if (response) { // If a user is found, show an alert
-        window.alert("Account with that email address already exists");
-      } else {
-        registerNewUser(); // No user found, proceed with registration
-      }
-    }).catch((error) => {
-      console.error("Error checking email existence:", error);
-    });
+    getUserByEmail(customer.email)
+      .then((response) => {
+        if (response) {
+          window.alert("Account with that email address already exists");
+        } else {
+          registerNewUser();
+        }
+      })
+      .catch((error) => {
+        console.error("Error checking email existence:", error);
+      });
   };
-  
 
   const updateCustomer = (evt) => {
     const copy = { ...customer };
@@ -67,7 +76,7 @@ export const Register = (props) => {
     if (id === "profilePicture" && files.length > 0) {
       const reader = new FileReader();
       reader.onload = () => {
-        copy[id] = reader.result; // Save image as a base64 string
+        copy[id] = reader.result;
         setCustomer(copy);
       };
       reader.readAsDataURL(files[0]);
@@ -138,17 +147,20 @@ export const Register = (props) => {
 
         <fieldset>
           <div className="form-group">
+            <label htmlFor="state">Select your state:</label>
             <select
               onChange={updateCustomer}
-              id="state"
+              id="stateID"
               className="form-control"
               required
+              value={customer.stateID}
             >
               <option value="">Select your state</option>
-              <option value="CA">California</option>
-              <option value="NY">New York</option>
-              <option value="TX">Texas</option>
-              {/* Add more states as needed */}
+              {states.map((state) => (
+                <option key={state.stateId} value={state.stateId}>
+                  {state.name}
+                </option>
+              ))}
             </select>
           </div>
         </fieldset>
@@ -173,11 +185,11 @@ export const Register = (props) => {
             </button>
           </div>
         </fieldset>
-      </form>
 
-      <section>
-        <Link to="/login">Already a member? Sign in</Link>
-      </section>
+        <section>
+          <Link to="/login">Already a member? Sign in</Link>
+        </section>
+      </form>
     </main>
   );
 };

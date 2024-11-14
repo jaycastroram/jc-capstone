@@ -7,10 +7,23 @@
 
 html, body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
   line-height: 1.6;
+
+  /* First layer: background image */
+  background-image: url('assets/Background.png'), 
+                    linear-gradient(rgba(254, 251, 251, 0.341), rgba(224, 224, 206, 0));
+  
+  background-blend-mode: overlay; /* Blend the image and gradient layers */
+  
+  /* Additional styling to cover the entire page */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Keeps the background image fixed in place while content scrolls */
+  background-attachment: fixed;
 }
+
 
 #root {
   display: flex;

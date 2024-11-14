@@ -1,0 +1,471 @@
+{
+    "users": [
+      {
+        "userId": 1,
+        "userName": "brewfan",
+        "fullName": "Brew Fan",
+        "email": "brewfan@example.com",
+        "password": "hashedPassword",
+        "stateID": 36,
+        "favBeerID": 1,
+        "favBrewery": "MadTree Brewing 2.0",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "7e67"
+      },
+      {
+        "userId": 2,
+        "userName": "hophead",
+        "fullName": "Hop Head",
+        "email": "hophead@example.com",
+        "password": "password123",
+        "stateID": 32,
+        "favBeerID": 3,
+        "favBrewery": "Sierra Nevada",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "9f30"
+      },
+      {
+        "userId": 3,
+        "userName": "beerlvr",
+        "fullName": "Beer Lover",
+        "email": "beerlover@example.com",
+        "password": "brewpass",
+        "stateID": 5,
+        "favBeerID": 2,
+        "favBrewery": "Stone Brewing",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "5ffd"
+      },
+      {
+        "userId": 4,
+        "userName": "lagerking",
+        "fullName": "Lager King",
+        "email": "lagerking@example.com",
+        "password": "kingbrew",
+        "stateID": 10,
+        "favBeerID": 4,
+        "favBrewery": "Budweiser",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "cb71"
+      },
+      {
+        "userId": 5,
+        "userName": "pintperfection",
+        "fullName": "Pint Perfection",
+        "email": "pintperfect@example.com",
+        "password": "perfection",
+        "stateID": 22,
+        "favBeerID": 5,
+        "favBrewery": "Lagunitas Brewing",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "6866"
+      },
+      {
+        "userId": 6,
+        "userName": "stoutspirit",
+        "fullName": "Stout Spirit",
+        "email": "stoutspirit@example.com",
+        "password": "darkandstrong",
+        "stateID": 6,
+        "favBeerID": 2,
+        "favBrewery": "Guinness",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "8ac0"
+      },
+      {
+        "userId": 7,
+        "userName": "craftchick",
+        "fullName": "Craft Chick",
+        "email": "craftchick@example.com",
+        "password": "brewqueen",
+        "stateID": 48,
+        "favBeerID": 6,
+        "favBrewery": "Blue Moon",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "9940"
+      },
+      {
+        "userId": 8,
+        "userName": "maltmeister",
+        "fullName": "Malt Meister",
+        "email": "maltmeister@example.com",
+        "password": "maltygoodness",
+        "stateID": 12,
+        "favBeerID": 4,
+        "favBrewery": "Samuel Adams",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "bb37"
+      },
+      {
+        "userId": 9,
+        "userName": "brewscout",
+        "fullName": "Brew Scout",
+        "email": "brewscout@example.com",
+        "password": "scout123",
+        "stateID": 42,
+        "favBeerID": 7,
+        "favBrewery": "Goose Island",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "c5fd"
+      },
+      {
+        "userId": 10,
+        "userName": "hopsoldier",
+        "fullName": "Hop Soldier",
+        "email": "hopsoldier@example.com",
+        "password": "hoparmy",
+        "stateID": 3,
+        "favBeerID": 1,
+        "favBrewery": "Dogfish Head",
+        "profilePicture": "",
+        "isLoggedIn": false,
+        "id": "ac55"
+      }
+    ],
+    "checklists": [
+      {
+        "checklistId": 1,
+        "breweryId": "b54b16e1-ac3b-4bff-a11f-f7ae9ddc27e0",
+        "breweryName": "MadTree Brewing 2.0",
+        "location": "Cincinnati, Ohio",
+        "personalRating": 5,
+        "visitDate": "2024-11-08",
+        "favTypeBeer": 2,
+        "recommended": true,
+        "id": "cbc2"
+      },
+      {
+        "checklistId": 2,
+        "breweryId": "a73f16e1-ac3b-5hff-a11f-f8ae9ddc27e0",
+        "breweryName": "10 Barrel Brewing Co",
+        "location": "San Diego, California",
+        "personalRating": 4,
+        "visitDate": "2024-12-08",
+        "favTypeBeer": 3,
+        "recommended": true,
+        "id": "30a4"
+      }
+    ],
+    "userChecklists": [
+      {
+        "id": 1,
+        "userId": 1
+      }
+    ],
+    "beerTypes": [
+      {
+        "typeId": 1,
+        "name": "IPA",
+        "id": "519c"
+      },
+      {
+        "typeId": 2,
+        "name": "Stout",
+        "id": "523b"
+      },
+      {
+        "typeId": 3,
+        "name": "Lager",
+        "id": "5ded"
+      },
+      {
+        "typeId": 4,
+        "name": "Pilsner",
+        "id": "16af"
+      },
+      {
+        "typeId": 5,
+        "name": "Pale Ale",
+        "id": "8654"
+      },
+      {
+        "typeId": 6,
+        "name": "Wheat Beer",
+        "id": "451a"
+      },
+      {
+        "typeId": 7,
+        "name": "Porter",
+        "id": "d9a9"
+      },
+      {
+        "typeId": 8,
+        "name": "Sour",
+        "id": "bedc"
+      },
+      {
+        "typeId": 9,
+        "name": "Brown Ale",
+        "id": "bcbe"
+      },
+      {
+        "typeId": 10,
+        "name": "Barleywine",
+        "id": "3ff2"
+      }
+    ],
+    "recommendations": [
+  
+    ],
+    "states": [
+      {
+        "stateId": 1,
+        "name": "Alabama",
+        "id": "6723"
+      },
+      {
+        "stateId": 2,
+        "name": "Alaska",
+        "id": "f80f"
+      },
+      {
+        "stateId": 3,
+        "name": "Arizona",
+        "id": "3cd2"
+      },
+      {
+        "stateId": 4,
+        "name": "Arkansas",
+        "id": "577a"
+      },
+      {
+        "stateId": 5,
+        "name": "California",
+        "id": "3f94"
+      },
+      {
+        "stateId": 6,
+        "name": "Colorado",
+        "id": "acd2"
+      },
+      {
+        "stateId": 7,
+        "name": "Connecticut",
+        "id": "6cc2"
+      },
+      {
+        "stateId": 8,
+        "name": "Delaware",
+        "id": "a735"
+      },
+      {
+        "stateId": 9,
+        "name": "Florida",
+        "id": "7fc9"
+      },
+      {
+        "stateId": 10,
+        "name": "Georgia",
+        "id": "1821"
+      },
+      {
+        "stateId": 11,
+        "name": "Hawaii",
+        "id": "f7bd"
+      },
+      {
+        "stateId": 12,
+        "name": "Idaho",
+        "id": "d7a8"
+      },
+      {
+        "stateId": 13,
+        "name": "Illinois",
+        "id": "a196"
+      },
+      {
+        "stateId": 14,
+        "name": "Indiana",
+        "id": "4bab"
+      },
+      {
+        "stateId": 15,
+        "name": "Iowa",
+        "id": "506f"
+      },
+      {
+        "stateId": 16,
+        "name": "Kansas",
+        "id": "5ed1"
+      },
+      {
+        "stateId": 17,
+        "name": "Kentucky",
+        "id": "a3de"
+      },
+      {
+        "stateId": 18,
+        "name": "Louisiana",
+        "id": "a7bc"
+      },
+      {
+        "stateId": 19,
+        "name": "Maine",
+        "id": "1cd9"
+      },
+      {
+        "stateId": 20,
+        "name": "Maryland",
+        "id": "0307"
+      },
+      {
+        "stateId": 21,
+        "name": "Massachusetts",
+        "id": "2a56"
+      },
+      {
+        "stateId": 22,
+        "name": "Michigan",
+        "id": "ed0e"
+      },
+      {
+        "stateId": 23,
+        "name": "Minnesota",
+        "id": "0b90"
+      },
+      {
+        "stateId": 24,
+        "name": "Mississippi",
+        "id": "e779"
+      },
+      {
+        "stateId": 25,
+        "name": "Missouri",
+        "id": "33d6"
+      },
+      {
+        "stateId": 26,
+        "name": "Montana",
+        "id": "0cf3"
+      },
+      {
+        "stateId": 27,
+        "name": "Nebraska",
+        "id": "11c8"
+      },
+      {
+        "stateId": 28,
+        "name": "Nevada",
+        "id": "637a"
+      },
+      {
+        "stateId": 29,
+        "name": "New Hampshire",
+        "id": "5014"
+      },
+      {
+        "stateId": 30,
+        "name": "New Jersey",
+        "id": "9cc1"
+      },
+      {
+        "stateId": 31,
+        "name": "New Mexico",
+        "id": "b9e0"
+      },
+      {
+        "stateId": 32,
+        "name": "New York",
+        "id": "b14c"
+      },
+      {
+        "stateId": 33,
+        "name": "North Carolina",
+        "id": "d30a"
+      },
+      {
+        "stateId": 34,
+        "name": "North Dakota",
+        "id": "2804"
+      },
+      {
+        "stateId": 35,
+        "name": "Ohio",
+        "id": "b088"
+      },
+      {
+        "stateId": 36,
+        "name": "Oklahoma",
+        "id": "4446"
+      },
+      {
+        "stateId": 37,
+        "name": "Oregon",
+        "id": "2645"
+      },
+      {
+        "stateId": 38,
+        "name": "Pennsylvania",
+        "id": "caae"
+      },
+      {
+        "stateId": 39,
+        "name": "Rhode Island",
+        "id": "8910"
+      },
+      {
+        "stateId": 40,
+        "name": "South Carolina",
+        "id": "1a75"
+      },
+      {
+        "stateId": 41,
+        "name": "South Dakota",
+        "id": "ffcf"
+      },
+      {
+        "stateId": 42,
+        "name": "Tennessee",
+        "id": "3555"
+      },
+      {
+        "stateId": 43,
+        "name": "Texas",
+        "id": "96bd"
+      },
+      {
+        "stateId": 44,
+        "name": "Utah",
+        "id": "a798"
+      },
+      {
+        "stateId": 45,
+        "name": "Vermont",
+        "id": "c397"
+      },
+      {
+        "stateId": 46,
+        "name": "Virginia",
+        "id": "3e5e"
+      },
+      {
+        "stateId": 47,
+        "name": "Washington",
+        "id": "c0e4"
+      },
+      {
+        "stateId": 48,
+        "name": "West Virginia",
+        "id": "828f"
+      },
+      {
+        "stateId": 49,
+        "name": "Wisconsin",
+        "id": "ec20"
+      },
+      {
+        "stateId": 50,
+        "name": "Wyoming",
+        "id": "167b"
+      }
+    ]
+  }

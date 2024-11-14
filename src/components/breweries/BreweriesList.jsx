@@ -54,6 +54,7 @@ const BreweriesList = () => {
   };
 
   return (
+    <div className="body">
     <div className="breweries-list">
       <h2>Breweries</h2>
 
@@ -130,6 +131,7 @@ const BreweriesList = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
