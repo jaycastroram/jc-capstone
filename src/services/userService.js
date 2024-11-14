@@ -1,44 +1,51 @@
 const USERS_KEY = "AleTrail_users";
-
-// Get all users from localStorage
 const getAllUsers = () => {
   return JSON.parse(localStorage.getItem(USERS_KEY)) || [];
 };
 
-export const createUser = (user) => {
-  return fetch("http://localhost:8088/users")
-    .then((response) => response.json())
-    .then((users) => {
-      // Determine the next numeric ID by finding the highest `userId` and adding 1
-      const nextUserId = users.length > 0 ? Math.max(...users.map(u => u.userId)) + 1 : 1;
 
-      // Create a new user object with the incremented `userId`
-      const newUser = { ...user, userId: nextUserId };
-
-      // POST the new user to the database
-      return fetch("http://localhost:8088/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      }).then((response) => response.json());
-    })
-    .catch((error) => {
-      console.error("Error creating user:", error);
-      throw error;
-    });
+export const createUser = async (user) => {
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  
+  const newUserId = users.length > 0 ? users[users.length - 1].userId + 1 : 1;
+  const newChecklistId = newUserId; 
+  
+  const newUser = { ...user, userId: newUserId, checklistId: newChecklistId };
+  users.push(newUser);
+  
+  localStorage.setItem("users", JSON.stringify(users));
+  
+  return newUser;
 };
-
-
 
 export const getUserByEmail = (email) => {
   return fetch(`http://localhost:8088/users?email=${email}`)
     .then((response) => response.json())
-    .then((users) => users.length > 0 ? users[0] : null) // Return the first user if found, otherwise null
+    .then((users) => users.length > 0 ? users[0] : null)
     .catch((error) => {
       console.error("Error fetching user by email:", error);
       throw error;
     });
 };
 
+export const getUserById = (userId) => {
+  return fetch(`http://localhost:8088/users?id=${userId}`)
+    .then((response) => response.json())
+    .then((data) => data[0]); 
+};
+
+export const updateUser = (userId, updatedData) => {
+  return fetch(`http://localhost:8088/users/${userId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updatedData)
+  })
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to update user");
+    }
+    return response.json();
+  });
+};
