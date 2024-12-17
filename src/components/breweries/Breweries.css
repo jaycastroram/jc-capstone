@@ -1,0 +1,305 @@
+/* General Container */
+.breweries-list {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Page Title */
+.breweries-list h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  /* width: 100%; */
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+  /* box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); */
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Featured Brewery */
+.featured-brewery {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  background-color: #e9f5ff;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.1);
+}
+
+.featured-brewery h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Featured Brewery Card */
+.featured-brewery .brewery-card {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: none;
+  background-color: #ffffff;
+}
+
+/* Brewery Cards Grid */
+.brewery-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Brewery Card */
+.brewery-card {
+  width: 100%;
+  max-width: 300px;
+  height: 320px;
+  perspective: 1000px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.brewery-card:hover {
+  transform: scale(1.05);
+}
+
+.brewery-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.brewery-card:hover .brewery-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back of Card */
+.brewery-card-front, .brewery-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.brewery-card-front {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.brewery-card-back {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+/* Brewery Information */
+.brewery-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.brewery-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.brewery-card-back p {
+  color: #ddd;
+}
+
+/* Rating Stars */
+.rating {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+/* Map Link */
+.map-link {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+/* Visited Badge */
+.badge.visited {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.brew-details {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.hero-section {
+  background-color: #333;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.info-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+}
+
+.info-item p {
+  margin-left: 10px;
+}
+
+.map-view {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Website Button */
+.website-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.website-button:hover {
+  background-color: #0056b3;
+}
+
+/* Add to Checklist Button */
+.add-checklist-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-checklist-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Back Button */
+.back-button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
